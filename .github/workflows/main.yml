@@ -1,0 +1,41 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    name: Lint and test on Node ${{ matrix.node }} and ${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: ["18.17.1"]
+        os: [ubuntu-latest]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: Generate Expo Route Types
+        run: yarn start & sleep 10 && kill $!
+
+      - name: Check types
+        run: yarn typecheck
+
+      - name: Expo Doctor
+        run: yarn doctor
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Format
+        run: yarn format
+
+      - name: Test
+        run: yarn test:ci
