@@ -7843,10 +7843,10 @@ queue@6.0.2:
   dependencies:
     inherits "~2.0.3"
 
-randsum@^3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/randsum/-/randsum-3.2.4.tgz#2a0f5a788c41bdb7cdc7b9dfa674aec22ab4993d"
-  integrity sha512-CJmXJFeTwojJYHS+O2HozXsY2LlyorPW4pCG6WW+7VVgfL2E/IpacwbTvNPW1IHmXZ2aXks2sM4wENtOlbccAA==
+randsum@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/randsum/-/randsum-3.2.5.tgz#a50e35f9fe2162783479c88eba2678a7278d078d"
+  integrity sha512-C4K4s7pCCXBokegz+BcHL4gGX30O6G/SgakQrG0tZr7b3RkxisoXeJlR+ch+5RTvoB2gmRdBodk8E9+7SwkLaw==
 
 range-parser@~1.2.1:
   version "1.2.1"
